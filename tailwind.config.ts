@@ -25,16 +25,17 @@ export default {
     },
     extend: {
       colors: {
-        primary: "var(--primary)",
-        secondary: "var(--secondary)",
+        primary: "#df3e0d",
+        secondary: "#eeeeee",
+        dark: "#000000",
         accent: {
-          DEFAULT: "var(--accent)",
-          hover: "var(--accent-hover)",
+          DEFAULT: "#df3e0d",
+          hover: "#df3e0d/10",
         },
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 } satisfies Config;
