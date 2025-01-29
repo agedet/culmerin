@@ -1,10 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap')
+layer(base);
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* @import 'tailwindcss'; */
+@import 'tailwindcss';
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  --color-primary: #df3e0d;
+
+  --color-accent: #df3e0d;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* typography */
+  --font-poppins: Poppins, sans-serif;
+  --font-outfit: Outfit, sans-serif;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 15px;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 :root {
   margin: 0;
@@ -52,7 +96,7 @@ li, ul {
 
 img {
   width: 100%;
-  height: auto !important;
+  height: auto;
 }
 
 a {
@@ -67,13 +111,13 @@ p {
 
 .notScrolled {
   position: fixed;
-  height: px;
+  height: 100px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 12px;
-  background: var(--secondary-color);
+  /* background: var(--dark-color); */
   z-index: 20;
 }
 
@@ -82,7 +126,7 @@ p {
   font-size: 16px;
   line-height: 19px;
   font-weight: 500;
-  /* text-transform: capitalize; */
+  text-transform: capitalize;
   transition: all .3s ease-in;
 }
 
@@ -120,20 +164,20 @@ p {
 
 .isScrolled {
   position: fixed;
-  height: 74px;
+  height: 80px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
   z-index: 20;
-  background: var(--secondary-color);
+  background: var(--bright-color);
   /* box-shadow: 1px 1px 5px 1px var(--neutral-color); */
   /* color: var(--dark-color); */
 }
 
 .isScrolled a {
-  color: var(--light-dark);
+  color: var(--dark-color);
   font-size: 16px;
   line-height: 19px;
   font-weight: 400;
@@ -170,7 +214,7 @@ p {
   /* text-transform: capitalize; */
   letter-spacing: 0.85px;
   border-radius: 50px;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   padding: 10px 20px;
 }
 
@@ -182,15 +226,15 @@ p {
   display: block;
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   top: 0;
   left: 0;
-  background: var(--shade-color);
+  background: var(--secondary-color);
+  color: var(--dark-color);
   z-index: 40;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  font-weight: 600;
+  gap: 15px;
+  padding: 100px 80px 30px 40px;
 }
 
 .background-image-hero {
