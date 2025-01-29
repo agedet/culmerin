@@ -14,7 +14,7 @@ function Contact() {
 
                     <div>
                         <h2 className='text-[#ffffff] text-[60px] w-[50%] font-600 leading-[66px]'>
-                            The design & dev agency you've been looking for.
+                            The design & dev agency you&lsquo;ve been looking for.
                         </h2>
                     </div>
                 </div>
