@@ -19,7 +19,7 @@ function Contact() {
                         </h2>
                     </div>
                 </div>
-                <div className='h-[350px] flex flex-col justify-between w-full px-[20px] py-[30px] bg-accent/10 rounded-b-xl overflow-hidden'>
+                <div className='h-[350px] flex flex-col gap-[50px] w-full px-[20px] py-[30px] bg-accent/10 rounded-b-xl overflow-hidden'>
                     <div>
                         <p className='text-[#ffffff] text-[20px] font-400 leading-[24px]'>
                             Ready to elevate your online presence? Drop us a message below, and let&lsquo;s start a conversation about your website
@@ -32,8 +32,8 @@ function Contact() {
                         </h3>
                     </div>
 
-                    <div className='w-[70%]'>
-                        <h2 className='text-[#ffffff] text-[40px] w-[70%] font-700 leading-[48px]'>
+                    <div className='w-[70%] text-[#000000]'>
+                        <h2 className='text-[#000000] text-[28px] w-[70%] font-700 leading-[38px]'>
                             Your benefits: <br />
                         </h2>
 
@@ -66,7 +66,7 @@ function Contact() {
             {/* Form */}
             <div className='flex justify-between items-center rounded-xs'>
                 <div>
-                    <h2 className='text-[#df3e0d] text-[60px] font-600 leading-[66px]'>
+                    <h2 className='text-[#df3e0d] text-[30px] font-600 leading-[36px]'>
                     Become a Client
                     </h2>
 
@@ -76,8 +76,8 @@ function Contact() {
                         <span className='border-b-2 w-full'></span>
                     </div> */}
 
-                    <form className='flex justify-center items-center px-[20px] py-[20px] bg-[#eeeeee] rounded-xs'>
-                        <div className='flex items-center gap-4 md:flex-col'>
+                    <form className='flex flex-col justify-start items-start gap-[20px] px-[20px] py-[20px] bg-[#eeeeee] rounded-xs'>
+                        <div className='flex flex-col items-center gap-4 md:flex-row'>
                             <div>
                                 <label htmlFor='name'>First Name</label>
                                 <input 
