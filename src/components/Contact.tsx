@@ -28,7 +28,7 @@ function Contact() {
 
                     <div>
                         <h3 className='text-[#ffffff] text-[20px] font-600 leading-[26px]'>
-                            Let's chat: +234 80 8574 4745
+                            Let&apos;s chat: +234 80 8574 4745
                         </h3>
                     </div>
 
