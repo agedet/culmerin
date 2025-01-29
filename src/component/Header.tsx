@@ -5,15 +5,15 @@ import { useEffect, useState } from 'react';
 
 
 const Header = () => {
-    const [clicked, setClicked] = useState(false);
+    // const [clicked, setClicked] = useState(false);
     const [isNavOpen, setIsNavOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
-    const handleClick = () => {
-        setClicked(!clicked);
-    }
+    // const handleClick = () => {
+    //     setClicked(!clicked);
+    // }
 
-    const closeMobileClicked = () => setClicked(false);
+    // const closeMobileClicked = () => setClicked(false);
 
     useEffect(() => {
         const onScroll = () => {
@@ -124,7 +124,7 @@ const Header = () => {
                             </div>
                             <ul className='MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]'>
                                 <li className='my-8 capitalize' 
-                                    onClick={closeMobileClicked}
+                                    // onClick={closeMobileClicked}
                                 >
                                     <Link href='/' legacyBehavior>
                                         <a>
@@ -133,7 +133,7 @@ const Header = () => {
                                     </Link>
                                 </li>
                                 <li className='my-8 capitalize' 
-                                    onClick={closeMobileClicked}
+                                    // onClick={closeMobileClicked}
                                 >
                                     <Link href='/about' legacyBehavior>
                                         <a target='_blank'>
@@ -142,7 +142,7 @@ const Header = () => {
                                     </Link>
                                 </li>
                                 <li className='my-8 capitalize' 
-                                    onClick={closeMobileClicked}
+                                    // onClick={closeMobileClicked}
                                 >
                                     <Link href='/market' legacyBehavior>
                                         <a target='_blank'>
@@ -152,7 +152,7 @@ const Header = () => {
                                 </li>
                                 
                                 <li className='my-8 capitalize' 
-                                    onClick={closeMobileClicked}
+                                    // onClick={closeMobileClicked}
                                 >
                                     <Link href='/blog' legacyBehavior>
                                         <a target='_blank'>
