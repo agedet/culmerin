@@ -15,12 +15,16 @@ layer(base);
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
 
-  --color-primary: #df3e0d;
+  --spacing: 1px;
 
+  --color-primary: #df3e0d;
+  --color-dark: #000000;
+  --color-secondary: #eeeeee;
+  --color-solid: #872608;
   --color-accent: #df3e0d;
 
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* --color-background: var(--background);
+  --color-foreground: var(--foreground); */
 
   /* typography */
   --font-poppins: Poppins, sans-serif;
@@ -109,15 +113,21 @@ p {
   font-family: "Poppins", sans-serif !important;
 }
 
+button {
+  padding: 15px 30px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
 .notScrolled {
-  position: fixed;
+  position: -webkit-sticky;
   height: 100px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 12px;
-  /* background: var(--dark-color); */
+  padding: 0 20px;
+  /* background: var(--bright-color); */
   z-index: 20;
 }
 
@@ -125,7 +135,7 @@ p {
   color: var(--dark-color);
   font-size: 16px;
   line-height: 19px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: capitalize;
   transition: all .3s ease-in;
 }
@@ -140,36 +150,46 @@ p {
 
 .notScrolled .nav-cta {
   color: var(--bright-color);
-  font-size: 18px;
+  font-size: 14px;
   line-height: 22px;
-  font-weight: 500 ;
+  font-weight: 600;
   letter-spacing: 0.85px;
-  border-radius: 12px;
+  border-radius: 5px;
   background-color: var(--primary-color);
-  padding: 10px 20px;
+  padding: 15px 30px;
   transition: all ease-in-out .3s;
 }
 
 .notScrolled .nav-cta:hover {
   color: var(--bright-color);
   background-color: var(--primary-color);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 19px;
   font-weight: 500;
   /* text-transform: capitalize; */
   letter-spacing: 0.85px;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 12px 22px;
+}
+
+.notScrolled .nav-cta-nude {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 500;
+  /* text-transform: capitalize; */
+  letter-spacing: 0.85px;
+  border-radius: 8px;
+  padding: 15px 30px;
 }
 
 .isScrolled {
   position: fixed;
-  height: 80px;
+  height: 100px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 20px;
   z-index: 20;
   background: var(--bright-color);
   /* box-shadow: 1px 1px 5px 1px var(--neutral-color); */
@@ -180,7 +200,7 @@ p {
   color: var(--dark-color);
   font-size: 16px;
   line-height: 19px;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: capitalize;
   transition: all .3s ease-in;
 }
@@ -196,26 +216,36 @@ p {
 .isScrolled .nav-cta {
   color: var(--bright-color);
   background-color: var(--primary-color);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 19px;
   font-weight: 400;
   /* text-transform: capitalize; */
-  border-radius: 50px;
+  border-radius: 8px;
   letter-spacing: 0.85px;
-  padding: 10px 15px;
+  padding: 15px 30px;
   transition: all ease-in-out .3s;
 }
 
 .isScrolled .nav-cta:hover {
   color: var(--bright-color);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 19px;
   font-weight: 400;
   /* text-transform: capitalize; */
   letter-spacing: 0.85px;
-  border-radius: 50px;
+  border-radius: 8px;
   background-color: var(--primary-color);
-  padding: 10px 20px;
+  padding: 15px 30px;
+}
+
+.isScrolled .nav-cta-nude {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 500;
+  /* text-transform: capitalize; */
+  letter-spacing: 0.85px;
+  border-radius: 8px;
+  padding: 15px 30px;
 }
 
 .hideMenuNav {

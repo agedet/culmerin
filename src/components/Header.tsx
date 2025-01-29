@@ -33,22 +33,22 @@ const Header = () => {
     <div className={isScrolled ? 'isScrolled' : 'notScrolled'}>
         <div className="container mx-auto">
             <div className='flex justify-between items-center'>
-                <div className=''>
+                <div className='w-[200px]'>
                     <Link href="/" >
                         <Image 
-                            src='/culmerinlogob.png'
+                            src='/culmerinlogoc.png'
                             alt='culmerin_technologies_logo'
-                            className='h-[50px] w-[50px] cursor-pointer'
+                            className='cursor-pointer'
                             height={120}
-                            width={120}
+                            width={150}
                         />
                     </Link>
                 </div>
 
-                <nav className='flex justify-between items-center'>
-                    <div className='DESKTOP-MENU hidden sm:flex sm:justify-between sm:items-center'>
+                <nav className=' flex justify-between items-center text-end'>
+                    <div className='DESKTOP-MENU hidden sm:flex sm:justify-between sm:items-center md:justify-between md:items-center md:gap-100'>
                         <div className=''>
-                            <ul className='flex justify-center items-center tracking-[0.75px] font-medium'>
+                            <ul className='flex justify-center items-center tracking-[0.75px] font-medium gap-50'>
                                 <li className='mx-3'>
                                     <Link href='/' legacyBehavior>
                                         <a className='px-4'>
@@ -64,9 +64,9 @@ const Header = () => {
                                     </Link>
                                 </li>
                                 <li  className='mx-3'>
-                                    <Link href='/market' legacyBehavior>
+                                    <Link href='#services' legacyBehavior>
                                         <a target='_blank' className='px-4'>
-                                            Market
+                                            Services
                                         </a>
                                     </Link>
                                 </li>
@@ -80,11 +80,22 @@ const Header = () => {
                             </ul>
                         </div>
                         <div>
-                            <ul>
+                            <ul className='flex justify-center items-center tracking-[0.75px] font-medium gap-30'>
+                                <li className='my-8 capitalize' 
+                                    // onClick={closeMobileClicked}
+                                >
+                                    <Link href='/' legacyBehavior>
+                                        <a 
+                                            target='_blank'
+                                            className='nav-cta-nude rounded-sm bg-accent/5 px-[15px] py-[10px] font-medium text-[14px] text-accent'
+                                        >
+                                            WhatsApp
+                                        </a>
+                                    </Link>
+                                </li>
                                 <li className='mx-1'>
-                                    <Link href='#learn-to-trade' legacyBehavior>
+                                    <Link href='#contact' legacyBehavior>
                                         <a         
-                                            // className='                 border-4 border-[#43BC6E] rounded-xs px-6 py-3 font-bold tracking-[0.75px]'
                                             className='nav-cta'
                                         >
                                             Contact Us
@@ -150,7 +161,7 @@ const Header = () => {
                                     <li className='my-8 capitalize' 
                                         // onClick={closeMobileClicked}
                                     >
-                                        <Link href='/market' legacyBehavior>
+                                        <Link href='#services' legacyBehavior>
                                             <a target='_blank'>
                                                 Services
                                             </a>
@@ -171,7 +182,7 @@ const Header = () => {
                                     <li className='my-8 capitalize' 
                                         // onClick={closeMobileClicked}
                                     >
-                                        <Link href='/market' legacyBehavior>
+                                        <Link href='/whatsapp' legacyBehavior>
                                             <a 
                                                 target='_blank'
                                                 className='rounded-sm bg-accent/5 px-[15px] py-[10px] font-medium text-[14px] text-accent'
@@ -184,7 +195,7 @@ const Header = () => {
                                     <li className='my-8 capitalize' 
                                         // onClick={closeMobileClicked}
                                     >
-                                        <Link href='/blog' legacyBehavior>
+                                        <Link href='#contact' legacyBehavior>
                                             <a 
                                                 target='_blank'
                                                 className='rounded-xs bg-accent px-[20px] py-[10px] font-medium text-[14px] text-white'
