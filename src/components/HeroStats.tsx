@@ -28,12 +28,12 @@ const stats = [
 
 function HeroStats() {
   return (
-    <section className='flex justify-center items-center h-[60vh] md:h-[30vh]'>
-        <div className='container mx-auto px-[20px] md:px-[50px]'>
-            <div className='grid grid-cols-1 gap-10 mx-auto justify-between sm:grid-cols-2 md:gap-20 md:grid-cols-4'>
+    <section className='flex justify-center items-center h-[50vh] sm:h-[50vh] md:h-[50vh] lg:h-[30vh]'>
+        <div className='@container w-[95%] lg:w-[90%]'>
+            <div className='grid grid-cols-2 gap-40 justify-between sm:grid-cols-2 lg:gap-20 lg:grid-cols-4'>
                 {stats.map((item, index) => {
                     return (
-                        <div key={index} className='border-l-4 border-accent/10 flex flex-col gap-6 text-center p-10 '>
+                        <div key={index} className=' border-l-4 border-accent/10 flex flex-col gap-10 text-center p-10 '>
                             <div className='flex gap-8 justify-start items-end'>
                                 <CountUp 
                                     end={item.num}

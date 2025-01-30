@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link'
 import { useEffect, useState } from 'react';
+import { LuMenu } from 'react-icons/lu';
 
 
 const Header = () => {
@@ -31,7 +32,7 @@ const Header = () => {
 
   return (
     <div className={isScrolled ? 'isScrolled' : 'notScrolled'}>
-        <div className="container mx-auto">
+        <div className="@container w-[95%] lg:w-[90%]">
             <div className='flex justify-between items-center'>
                 <div className='w-[200px]'>
                     <Link href="/" >
@@ -45,8 +46,8 @@ const Header = () => {
                     </Link>
                 </div>
 
-                <nav className=' flex justify-between items-center text-end'>
-                    <div className='DESKTOP-MENU hidden sm:flex sm:justify-between sm:items-center md:justify-between md:items-center md:gap-100'>
+                <nav className=' flex justify-between items-center'>
+                    <div className='DESKTOP-MENU hidden lg:flex lg:justify-between lg:items-center lg:justify-between lg:items-center lg:gap-100'>
                         <div className=''>
                             <ul className='flex justify-center items-center tracking-[0.75px] font-medium gap-50'>
                                 <li className='mx-3'>
@@ -80,23 +81,23 @@ const Header = () => {
                             </ul>
                         </div>
                         <div>
-                            <ul className='flex justify-center items-center tracking-[0.75px] font-medium gap-30'>
-                                <li className='my-8 capitalize' 
+                            <ul className='flex justify-center items-center tracking-[0.75px] font-medium gap-10'>
+                                <li className='capitalize' 
                                     // onClick={closeMobileClicked}
                                 >
                                     <Link href='/' legacyBehavior>
                                         <a 
                                             target='_blank'
-                                            className='nav-cta-nude rounded-sm bg-accent/5 px-[15px] py-[10px] font-medium text-[14px] text-accent'
+                                            className='nav-cta-nude myPadding rounded-sm bg-accent/5 px-[15px] py-[10px] font-medium text-[14px] text-accent'
                                         >
                                             WhatsApp
                                         </a>
                                     </Link>
                                 </li>
-                                <li className='mx-1'>
+                                <li>
                                     <Link href='#contact' legacyBehavior>
                                         <a         
-                                            className='nav-cta'
+                                            className='nav-cta myPadding rounded-xs bg-accent px-[30px] py-[15px] font-medium text-[14px] text-white'
                                         >
                                             Contact Us
                                         </a>
@@ -107,15 +108,17 @@ const Header = () => {
                     </div>
 
                     {/* MOBILE MENU */}
-                    <div className='MOBILE-NAV-MENU flex justify-center items-center sm:hidden'>
+                    <div className='MOBILE-NAV-MENU flex justify-center items-center lg:hidden'>
                         {/* HAMBURGER MENU */}
                         <div 
-                            className='HAMBURGER-ICON gap-2 cursor-pointer'
+                            className='HAMBURGER-ICON flex flex-col gap-8 cursor-pointer'
                             onClick={() => setIsNavOpen((prev) => !prev)}
                         >
-                            <span className='block h-0.5 w-8 animate-pulse bg-black'></span>
-                            <span className='block h-0.5 w-7 animate-pulse bg-black'></span>
-                            <span className='block h-0.5 w-6 animate-pulse bg-black'></span>
+                            <span className='block h-2 w-32 animate-pulse bg-black'></span>
+                            <span className='block h-2 w-25 animate-pulse bg-black'></span>
+                            <span className='block h-2 w-23 animate-pulse bg-black'></span>
+
+                            {/* <LuMenu className='text-[#000000] h-1 w-1 animate-pulse' /> */}
                         </div>
 
                         {/* NAV MENU */}
