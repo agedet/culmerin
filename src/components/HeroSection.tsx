@@ -4,7 +4,7 @@ import React from 'react'
 function HeroSection() {
   return (
     <div className='flex justify-center items-center h-auto lg:h-[100vh]'>
-      <main className='@container w-[95%] lg:w-[90%]'>
+      <main className='@container w-[95%] lg:w-[95%]'>
         <div className='flex flex-col justify-between items-center gap-40 border-b-3 border-b-accent/5 rounded-xs lg:flex-row lg:gap-10'>
           <div className='flex flex-col gap-20 pr-[20px] w-full lg:w-[50%]'>
             <h2 className='font-family text-[#000000] text-[60px] font-700 leading-[66px] w-full lg:w-[80%]'>

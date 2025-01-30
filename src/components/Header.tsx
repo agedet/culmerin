@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import Link from 'next/link'
 import { useEffect, useState } from 'react';
-import { LuMenu } from 'react-icons/lu';
 
 
 const Header = () => {
@@ -32,7 +31,7 @@ const Header = () => {
 
   return (
     <div className={isScrolled ? 'isScrolled' : 'notScrolled'}>
-        <div className="@container w-[95%] lg:w-[90%]">
+        <div className="@container w-[95%] lg:w-[95%]">
             <div className='flex justify-between items-center'>
                 <div className='w-[200px]'>
                     <Link href="/" >
@@ -117,8 +116,6 @@ const Header = () => {
                             <span className='block h-2 w-32 animate-pulse bg-black'></span>
                             <span className='block h-2 w-25 animate-pulse bg-black'></span>
                             <span className='block h-2 w-23 animate-pulse bg-black'></span>
-
-                            {/* <LuMenu className='text-[#000000] h-1 w-1 animate-pulse' /> */}
                         </div>
 
                         {/* NAV MENU */}

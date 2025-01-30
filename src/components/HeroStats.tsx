@@ -29,17 +29,17 @@ const stats = [
 function HeroStats() {
   return (
     <section className='flex justify-center items-center h-[50vh] sm:h-[50vh] md:h-[50vh] lg:h-[30vh]'>
-        <div className='@container w-[95%] lg:w-[90%]'>
-            <div className='grid grid-cols-2 gap-40 justify-between sm:grid-cols-2 lg:gap-20 lg:grid-cols-4'>
+        <div className='@container w-[95%] lg:max-w-[95%] mx-auto'>
+            <div className='grid grid-cols-2 gap-40 justify-between sm:grid-cols-2 lg:gap-40 lg:grid-cols-4'>
                 {stats.map((item, index) => {
                     return (
-                        <div key={index} className=' border-l-4 border-accent/10 flex flex-col gap-10 text-center p-10 '>
+                        <div key={index} className=' border-l-4 border-accent/10 flex flex-col gap-2 text-center my-padding-container'>
                             <div className='flex gap-8 justify-start items-end'>
                                 <CountUp 
                                     end={item.num}
                                     duration={5}
                                     delay={2}
-                                    className="text-4xl xl:text-6xl font-extrabold"
+                                    className="text-4xl xl:text-6xl font-bold"
                                 />
 
                                 <p className='text-[20px] leading-[26px] text-end font-600'>
