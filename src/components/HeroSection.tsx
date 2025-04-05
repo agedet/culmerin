@@ -1,44 +1,44 @@
 import Image from 'next/image'
 import React from 'react'
+import Link from 'next/link'
 
 function HeroSection() {
   return (
-    <div className='flex justify-center items-center h-auto lg:h-[100vh]'>
-      <main className='@container w-[95%] lg:w-[95%]'>
-        <div className='flex flex-col justify-between items-center gap-40 border-b-3 border-b-accent/5 rounded-xs lg:flex-row lg:gap-10'>
-          <div className='flex flex-col gap-20 pr-[20px] w-full lg:w-[50%]'>
-            <h2 className='font-family text-[#000000] text-[60px] font-700 leading-[66px] w-full lg:w-[80%]'>
+    <section className='flex justify-center items-center lg:h-screen'>
+      <main className='container mx-auto pt-[50px] max-w-[95%] lg:max-w-[90%]'>
+        <div className='flex flex-col justify-between items-center gap-10 border-b-3 border-b-primary/5 rounded-[4px] lg:flex-row lg:gap-10'>
+          <div className='grid gap-2 w-full lg:w-[50%]'>
+            <h2 className='font-family text-[#000000] text-[32px] leading-[38px] md:text-[44px] md:leading-[48px] lg:text-[60px] font-700 lg:leading-[66px] w-full'>
               Stronger presence for a better future
             </h2>
 
-            <p className='text-[#872608]/80 font-500 text-[30px] leading-[42px] w-full lg:w-[80%]'>
+            <p className='text-[#872608]/80 mt-[20px] font-500 text-[16px] leading-[22px] md:text-[20px] md:leading-[28px] lg:text-[30px] lg:leading-[42px] w-full'>
               We manage your digital presence, so you can manage your buisness
             </p>
 
-            <div className='flex gap-8 mt-[40px] mb-[40px]'>
-              <button className='rounded-xs bg-accent px-[30px] font-medium text-[14px] text-white'>
+            <div className='flex gap-4 mt-[40px] mb-[40px]'>
+              <Link href='#contact' className='rounded-[4px] bg-primary px-[22px] py-[13px] font-semibold text-[14px] text-white'>
                 Get a quote
-              </button>
+              </Link>
 
-              <button className='rounded-xs bg-accent/5 px-[15px] py-[10px] font-medium text-[14px] text-accent'>
+              <Link href='#contact' className='rounded-[4px] bg-primary/5 px-[22px] py-[13px] font-semibold text-[14px] text-primary'>
                 Book a Consultation
-              </button>
+              </Link>
             </div>
-
           </div>
 
-          <div className='w-full lg:w-[50%]'>
+          <div className='w-full flex justify-center lg:w-[50%]'>
             <Image 
               src='/jobshots_so.png'
               alt='Hero Image'
-              className='rotate-x-20 -rotate-y-20 skew-y-5'
-              width={900}
-              height={1000}
+              width={500}
+              height={100}
+              className='w-3/4 lg:w-[100%]'
             />
           </div>
         </div>
       </main>
-    </div>
+    </section>
   )
 }
 

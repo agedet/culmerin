@@ -31,96 +31,92 @@ const Header = () => {
 
   return (
     <div className={isScrolled ? 'isScrolled' : 'notScrolled'}>
-        <div className="@container w-[95%] lg:w-[95%]">
+        <div className="container mx-auto max-w-[95%] lg:max-w-[90%]">
             <div className='flex justify-between items-center'>
-                <div className='w-[200px]'>
+                <div className='flex-[1]'>
                     <Link href="/" >
                         <Image 
                             src='/culmerinlogoc.png'
                             alt='culmerin_technologies_logo'
-                            className='cursor-pointer'
-                            height={120}
-                            width={150}
+                            width={500}
+                            height={100}
+                            className='cursor-pointer w-[150px]'
                         />
                     </Link>
                 </div>
 
-                <nav className=' flex justify-between items-center'>
-                    <div className='DESKTOP-MENU hidden lg:flex lg:justify-between lg:items-center lg:justify-between lg:items-center lg:gap-100'>
-                        <div className=''>
-                            <ul className='flex justify-center items-center tracking-[0.75px] font-medium gap-50'>
-                                <li className='mx-3'>
-                                    <Link href='/' legacyBehavior>
-                                        <a className='px-4'>
-                                            Home
-                                        </a>
-                                    </Link>
-                                </li>
-                                <li  className='sm:mx-3'>
-                                    <Link href='#about' legacyBehavior>
-                                        <a className='px-4'>
-                                            About
-                                        </a>
-                                    </Link>
-                                </li>
-                                <li  className='mx-3'>
-                                    <Link href='#services' legacyBehavior>
-                                        <a target='_blank' className='px-4'>
-                                            Services
-                                        </a>
-                                    </Link>
-                                </li>
-                                <li  className='mx-3'>
-                                    <Link href='/blog' legacyBehavior>
-                                        <a target='_blank' className='px-4'>
-                                            Blog
-                                        </a>
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul className='flex justify-center items-center tracking-[0.75px] font-medium gap-10'>
-                                <li className='capitalize' 
-                                    // onClick={closeMobileClicked}
-                                >
-                                    <Link href='/' legacyBehavior>
-                                        <a 
-                                            target='_blank'
-                                            className='nav-cta-nude myPadding rounded-sm bg-accent/5 px-[15px] py-[10px] font-medium text-[14px] text-accent'
-                                        >
-                                            WhatsApp
-                                        </a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href='#contact' legacyBehavior>
-                                        <a         
-                                            className='nav-cta myPadding rounded-xs bg-accent px-[30px] py-[15px] font-medium text-[14px] text-white'
-                                        >
-                                            Contact Us
-                                        </a>
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
+                <nav className='flex-[2]'>
+                    <div className='DESKTOP-MENU hidden lg:flex lg:justify-between lg:items-center'>
+                        <ul className='flex justify-start items-center tracking-[0.75px] font-medium gap-[40px]'>
+                            <li>
+                                <Link href='/' legacyBehavior>
+                                    <a>
+                                        Home
+                                    </a>
+                                </Link>
+                            </li>
+                            <li  className='sm:mx-3'>
+                                <Link href='#about' legacyBehavior>
+                                    <a>
+                                        About
+                                    </a>
+                                </Link>
+                            </li>
+                            <li >
+                                <Link href='#services' legacyBehavior>
+                                    <a target='_blank'>
+                                        Services
+                                    </a>
+                                </Link>
+                            </li>
+                            <li >
+                                <Link href='/blog' legacyBehavior>
+                                    <a target='_blank'>
+                                        Blog
+                                    </a>
+                                </Link>
+                            </li>
+                        </ul>
+                       
+                        <ul className='flex justify-center items-center tracking-[0.75px] font-medium gap-10'>
+                            <li className='capitalize'>
+                                <Link href='/' legacyBehavior>
+                                    <Image 
+                                        src='/icons8-whatsapp-48.png'
+                                        alt='whatsapp_icon'
+                                        width={48}
+                                        height={48}
+                                        className='w-[48px] h-[48px] object-contain' 
+                                    />
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href='#contact' legacyBehavior>
+                                    <a         
+                                        className='nav-cta font-inter rounded-[4px] bg-prinary px-[22px] py-[13px] font-medium text-[14px] text-white'
+                                    >
+                                        Contact Us
+                                    </a>
+                                </Link>
+                            </li>
+                        </ul>
                     </div>
 
                     {/* MOBILE MENU */}
-                    <div className='MOBILE-NAV-MENU flex justify-center items-center lg:hidden'>
+                    <div className='MOBILE-NAV-MENU flex justify-end items-center lg:hidden'>
                         {/* HAMBURGER MENU */}
                         <div 
-                            className='HAMBURGER-ICON flex flex-col gap-8 cursor-pointer'
+                            className='HAMBURGER-ICON flex flex-col gap-1.5 cursor-pointer'
                             onClick={() => setIsNavOpen((prev) => !prev)}
                         >
-                            <span className='block h-2 w-32 animate-pulse bg-black'></span>
-                            <span className='block h-2 w-25 animate-pulse bg-black'></span>
-                            <span className='block h-2 w-23 animate-pulse bg-black'></span>
+                            <span className='block h-0.5 w-7 animate-pulse bg-black'></span>
+                            <span className='block h-0.5 w-7 animate-pulse bg-black'></span>
+                            <span className='block h-0.5 w-7 animate-pulse bg-black'></span>
                         </div>
 
                         {/* NAV MENU */}
                         <div className={isNavOpen ? 'showMenuNav' : 'hideMenuNav'}>
-                            <div className='CROSS-ICON bg-accent absolute top-6 right-6 px-8 py-8'
+                            <div className='CROSS-ICON bg-accent absolute top-2 right-3 px-4 py-4'
                                 onClick={() => setIsNavOpen(false)}
                             >
                                 <svg
@@ -138,9 +134,9 @@ const Header = () => {
                             </div>
 
                             {/* links */}
-                            <div className='MENU-LINK-MOBILE-OPEN h-[500px] gap-10 flex flex-col items-center justify-center'>
-                                <ul className='MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-center gap-10 h-auto p-8'>
-                                    <li className='my-8 capitalize' 
+                            <div className='MENU-LINK-MOBILE-OPEN grid gap-14'>
+                                <ul className='MENU-LINK-MOBILE-OPEN grid gap-6 '>
+                                    <li  
                                         // onClick={closeMobileClicked}
                                     >
                                         <Link href='/' legacyBehavior>
@@ -149,7 +145,7 @@ const Header = () => {
                                             </a>
                                         </Link>
                                     </li>
-                                    <li className='my-8 capitalize' 
+                                    <li 
                                         // onClick={closeMobileClicked}
                                     >
                                         <Link href='/about' legacyBehavior>
@@ -158,7 +154,7 @@ const Header = () => {
                                             </a>
                                         </Link>
                                     </li>
-                                    <li className='my-8 capitalize' 
+                                    <li 
                                         // onClick={closeMobileClicked}
                                     >
                                         <Link href='#services' legacyBehavior>
@@ -168,7 +164,7 @@ const Header = () => {
                                         </Link>
                                     </li>
                                     
-                                    <li className='my-8 capitalize' 
+                                    <li 
                                         // onClick={closeMobileClicked}
                                     >
                                         <Link href='/blog' legacyBehavior>
@@ -178,34 +174,35 @@ const Header = () => {
                                         </Link>
                                     </li>
                                 </ul>
-                                <ul className=' flex flex-col items-center justify-center gap-10 px-8'>
-                                    <li className='my-8 capitalize' 
+
+                                <ul className='grid gap-8'>
+                                    <li 
                                         // onClick={closeMobileClicked}
                                     >
                                         <Link href='/whatsapp' legacyBehavior>
-                                            <a 
-                                                target='_blank'
-                                                className='rounded-sm bg-accent/5 px-[15px] py-[10px] font-medium text-[14px] text-accent'
-                                            >
-                                                WhatsApp
-                                            </a>
+                                            <Image 
+                                                src='/icons8-whatsapp-48.png'
+                                                alt='whatsapp_icon'
+                                                width={48}
+                                                height={48}
+                                                className='w-[48px] h-[48px]'
+                                            />
                                         </Link>
                                     </li>
                                     
-                                    <li className='my-8 capitalize' 
+                                    <li
                                         // onClick={closeMobileClicked}
                                     >
                                         <Link href='#contact' legacyBehavior>
                                             <a 
                                                 target='_blank'
-                                                className='rounded-xs bg-accent px-[20px] py-[10px] font-medium text-[14px] text-white'
+                                                className='font-inter rounded-[4px] bg-primary px-[22px] py-[13px] font-medium text-[14px] text-white'
                                             >
-                                                CONTACT US
+                                                Contact Us
                                             </a>
                                         </Link>
                                     </li>
                                 </ul>
-                                
                             </div>
                         </div>
                     </div>
