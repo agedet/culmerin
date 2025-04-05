@@ -71,37 +71,10 @@ button {
   border-radius: 4px;
 }
 
-/* .my-padding-button {
-  padding: 15px 30px;
+::placeholder {
+  color: var(--dark);
+  opacity: 0.5;
 }
-
-.my-padding-container {
-  padding: 0px 10px;
-}
-
-.my-padding-container-1 {
-  padding: 5px 10px;
-}
-
-.my-padding-container-2 {
-  padding: 20px 20px;
-}
-
-.my-padding-container-3 {
-  padding: 50px 0px;
-}
-
-.my-padding-container-4 {
-  padding: 40px 30px;
-}
-
-.my-padding-form-1 {
-  padding: 10px 20px;
-}
-
-.my-margin-form-1 {
-  margin: 10px 0px;
-} */
 
 .notScrolled {
   position: -webkit-sticky;

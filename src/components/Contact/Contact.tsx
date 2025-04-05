@@ -125,7 +125,7 @@ function Contact() {
                             </div>
                         </div>
 
-                        <form onSubmit={handleSubmit} className='w-full grid gap-2 px-[20px] py-[20px] bg-white rounded-[4px]'>
+                        <form onSubmit={handleSubmit} className='w-full grid gap-4 px-[20px] py-[20px] bg-white rounded-[4px]'>
                             <div className='w-full flex flex-row lg:flex-col items-center gap-4'>
                                 <div className='w-full'>
                                     <Label htmlFor='firstName'>First Name</Label>
