@@ -11,7 +11,6 @@ export default function Home() {
       <HeroStats />
       <ServiceSection />
       <Contact />
-
     </div>
   );
 }

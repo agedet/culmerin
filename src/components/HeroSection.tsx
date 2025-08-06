@@ -6,23 +6,23 @@ function HeroSection() {
   return (
     <section className='flex justify-center items-center lg:h-screen'>
       <main className='container mx-auto pt-[50px] max-w-[95%] lg:max-w-[90%]'>
-        <div className='flex flex-col justify-between items-center gap-10 border-b-3 border-b-primary/5 rounded-[4px] lg:flex-row lg:gap-10'>
+        <div className='flex flex-col justify-between items-center gap-10 border-b-3 border-b-primary/5 rounded-[4px] lg:flex-row lg:gap-20'>
           <div className='grid gap-2 w-full lg:w-[50%]'>
-            <h2 className='font-family text-[#000000] text-[32px] leading-[38px] md:text-[44px] md:leading-[48px] lg:text-[60px] font-700 lg:leading-[66px] w-full'>
+            <h2 className='font-family text-[#000000]  text-[32px] leading-[38px] md:text-[44px] md:leading-[48px] lg:text-[75px] font-medium lg:leading-[85px] w-full'>
               Stronger presence for a better future
             </h2>
 
-            <p className='text-[#872608]/80 mt-[20px] font-500 text-[16px] leading-[22px] md:text-[20px] md:leading-[28px] lg:text-[30px] lg:leading-[42px] w-full'>
-              We manage your digital presence, so you can manage your buisness
+            <p className='text-[#872608]/80 mt-[20px] font-normal text-[12px] leading-[21px] md:text-[17px] md:leading-[29px] lg:text-[18px] lg:leading-[31px] w-full'>
+              We manage your digital presence, so you can manage your buisness.
             </p>
 
             <div className='flex gap-4 mt-[40px] mb-[40px]'>
-              <Link href='#contact' className='rounded-[4px] bg-primary px-[22px] py-[13px] font-semibold text-[14px] text-white'>
-                Get a quote
+              <Link href='#contact' className='rounded-[50px] bg-primary px-[22px] py-[13px] font-medium text-[17px] leading-[29px] text-white'>
+                Start Today
               </Link>
 
-              <Link href='#contact' className='rounded-[4px] bg-primary/5 px-[22px] py-[13px] font-semibold text-[14px] text-primary'>
-                Book a Consultation
+              <Link href='#contact' className='rounded-[50px] border border-primary px-[22px] py-[13px] font-medium text-[17px] leading-[29px] text-primary'>
+                Get a Free Consultation
               </Link>
             </div>
           </div>

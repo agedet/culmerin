@@ -4,17 +4,19 @@ import Image from 'next/image';
 import Link from 'next/link'
 import { useEffect, useState } from 'react';
 
+const NAVLINKS = [
+    { href: '/', label: 'Home' },
+    { href: '/#about', label: 'About' },
+    { href: '/#services', label: 'Services' },
+    { href: '/#blog', label: 'Blog' },
+]
 
 const Header = () => {
     // const [clicked, setClicked] = useState(false);
     const [isNavOpen, setIsNavOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
-    // const handleClick = () => {
-    //     setClicked(!clicked);
-    // }
-
-    // const closeMobileClicked = () => setClicked(false);
+    const closeMobileClicked = () => setIsNavOpen(false);
 
     useEffect(() => {
         const onScroll = () => {
@@ -78,24 +80,24 @@ const Header = () => {
                             </li>
                         </ul>
                        
-                        <ul className='flex justify-center items-center tracking-[0.75px] font-medium gap-10'>
+                        <ul className='flex justify-center items-center tracking-[0.75px] font-medium gap-4'>
                             <li className='capitalize'>
                                 <Link href='/' legacyBehavior>
                                     <Image 
                                         src='/icons8-whatsapp-48.png'
                                         alt='whatsapp_icon'
-                                        width={48}
-                                        height={48}
-                                        className='w-[48px] h-[48px] object-contain' 
+                                        width={40}
+                                        height={40}
+                                        className='w-[40px] h-[40px] object-contain' 
                                     />
                                 </Link>
                             </li>
                             <li>
                                 <Link href='#contact' legacyBehavior>
                                     <a         
-                                        className='nav-cta font-inter rounded-[4px] bg-prinary px-[22px] py-[13px] font-medium text-[14px] text-white'
+                                        className='nav-cta font-inter rounded-full border-[1px] border-primary px-[22px] py-[13px] text-[12px] text-primary'
                                     >
-                                        Contact Us
+                                        Get a Free Consultation
                                     </a>
                                 </Link>
                             </li>
