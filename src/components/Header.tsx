@@ -4,19 +4,19 @@ import Image from 'next/image';
 import Link from 'next/link'
 import { useEffect, useState } from 'react';
 
-const NAVLINKS = [
-    { href: '/', label: 'Home' },
-    { href: '/#about', label: 'About' },
-    { href: '/#services', label: 'Services' },
-    { href: '/#blog', label: 'Blog' },
-]
+// const NAVLINKS = [
+//     { href: '/', label: 'Home' },
+//     { href: '/#about', label: 'About' },
+//     { href: '/#services', label: 'Services' },
+//     { href: '/#blog', label: 'Blog' },
+// ]
 
 const Header = () => {
     // const [clicked, setClicked] = useState(false);
     const [isNavOpen, setIsNavOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
-    const closeMobileClicked = () => setIsNavOpen(false);
+    // const closeMobileClicked = () => setIsNavOpen(false);
 
     useEffect(() => {
         const onScroll = () => {
