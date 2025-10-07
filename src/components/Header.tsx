@@ -65,15 +65,15 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li >
-                                <Link href='#services' legacyBehavior>
-                                    <a target='_blank'>
+                                <Link href='/services' legacyBehavior>
+                                    <a>
                                         Services
                                     </a>
                                 </Link>
                             </li>
                             <li >
                                 <Link href='/blog' legacyBehavior>
-                                    <a target='_blank'>
+                                    <a>
                                         Blog
                                     </a>
                                 </Link>
@@ -82,7 +82,7 @@ const Header = () => {
                        
                         <ul className='flex justify-center items-center tracking-[0.75px] font-medium gap-4'>
                             <li className='capitalize'>
-                                <Link href='/' legacyBehavior>
+                                <Link href='https://wa.me/message/CMEEDQ4PSHVTG1' legacyBehavior>
                                     <Image 
                                         src='/icons8-whatsapp-48.png'
                                         alt='whatsapp_icon'
@@ -159,8 +159,8 @@ const Header = () => {
                                     <li 
                                         // onClick={closeMobileClicked}
                                     >
-                                        <Link href='#services' legacyBehavior>
-                                            <a target='_blank'>
+                                        <Link href='/services' legacyBehavior>
+                                            <a>
                                                 Services
                                             </a>
                                         </Link>
@@ -170,7 +170,7 @@ const Header = () => {
                                         // onClick={closeMobileClicked}
                                     >
                                         <Link href='/blog' legacyBehavior>
-                                            <a target='_blank'>
+                                            <a>
                                                 Blog
                                             </a>
                                         </Link>

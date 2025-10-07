@@ -21,7 +21,7 @@ function Contact() {
     } = useContactLogic();
 
   return (
-    <div className='flex justify-center items-center h-full' id='contact'>
+    <div className='flex justify-center items-center h-full py-[50px]' id='contact'>
         <div className='w-full lg:container lg:max-w-[95%]'>
             <div className='flex flex-col justify-between items-center gap-10 lg:flex-row lg:gap-10'>
                 <div className='flex flex-col items-center lg:w-[60%]'>
