@@ -4,19 +4,9 @@ import Image from 'next/image';
 import Link from 'next/link'
 import { useEffect, useState } from 'react';
 
-// const NAVLINKS = [
-//     { href: '/', label: 'Home' },
-//     { href: '/#about', label: 'About' },
-//     { href: '/#services', label: 'Services' },
-//     { href: '/#blog', label: 'Blog' },
-// ]
-
 const Header = () => {
-    // const [clicked, setClicked] = useState(false);
     const [isNavOpen, setIsNavOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-
-    // const closeMobileClicked = () => setIsNavOpen(false);
 
     useEffect(() => {
         const onScroll = () => {
@@ -29,7 +19,6 @@ const Header = () => {
         window.addEventListener('scroll', onScroll);
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
-
 
   return (
     <div className={isScrolled ? 'isScrolled' : 'notScrolled'}>
@@ -58,13 +47,13 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li  className='sm:mx-3'>
-                                <Link href='#about' legacyBehavior>
+                                <Link href='/#about' legacyBehavior>
                                     <a>
                                         About
                                     </a>
                                 </Link>
                             </li>
-                            <li >
+                            <li>
                                 <Link href='/services' legacyBehavior>
                                     <a>
                                         Services
@@ -82,7 +71,7 @@ const Header = () => {
                        
                         <ul className='flex justify-center items-center tracking-[0.75px] font-medium gap-4'>
                             <li className='capitalize'>
-                                <Link href='https://wa.me/message/CMEEDQ4PSHVTG1' legacyBehavior>
+                                <Link href='https://wa.me/message/CMEEDQ4PSHVTG1' target='_blank' legacyBehavior>
                                     <Image 
                                         src='/icons8-whatsapp-48.png'
                                         alt='whatsapp_icon'
@@ -93,7 +82,7 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href='#contact' legacyBehavior>
+                                <Link href='/#contact' legacyBehavior>
                                     <a         
                                         className='nav-cta font-inter rounded-full border-[1px] border-primary px-[22px] py-[13px] text-[12px] text-primary'
                                     >
@@ -139,7 +128,7 @@ const Header = () => {
                             <div className='MENU-LINK-MOBILE-OPEN grid gap-14'>
                                 <ul className='MENU-LINK-MOBILE-OPEN grid gap-6 '>
                                     <li  
-                                        // onClick={closeMobileClicked}
+                                        onClick={() => setIsNavOpen(false)}
                                     >
                                         <Link href='/' legacyBehavior>
                                             <a>
@@ -148,16 +137,16 @@ const Header = () => {
                                         </Link>
                                     </li>
                                     <li 
-                                        // onClick={closeMobileClicked}
+                                        onClick={() => setIsNavOpen(false)}
                                     >
-                                        <Link href='/about' legacyBehavior>
-                                            <a target='_blank'>
+                                        <Link href='/#about' legacyBehavior>
+                                            <a>
                                                 About
                                             </a>
                                         </Link>
                                     </li>
                                     <li 
-                                        // onClick={closeMobileClicked}
+                                        onClick={() => setIsNavOpen(false)}
                                     >
                                         <Link href='/services' legacyBehavior>
                                             <a>
@@ -167,7 +156,7 @@ const Header = () => {
                                     </li>
                                     
                                     <li 
-                                        // onClick={closeMobileClicked}
+                                        onClick={() => setIsNavOpen(false)}
                                     >
                                         <Link href='/blog' legacyBehavior>
                                             <a>
@@ -179,9 +168,9 @@ const Header = () => {
 
                                 <ul className='grid gap-8'>
                                     <li 
-                                        // onClick={closeMobileClicked}
+                                        onClick={() => setIsNavOpen(false)}
                                     >
-                                        <Link href='/whatsapp' legacyBehavior>
+                                        <Link href='https://wa.me/message/CMEEDQ4PSHVTG1' target='_blank' legacyBehavior>
                                             <Image 
                                                 src='/icons8-whatsapp-48.png'
                                                 alt='whatsapp_icon'
@@ -193,9 +182,9 @@ const Header = () => {
                                     </li>
                                     
                                     <li
-                                        // onClick={closeMobileClicked}
+                                        onClick={() => setIsNavOpen(false)}
                                     >
-                                        <Link href='#contact' legacyBehavior>
+                                        <Link href='/#contact' legacyBehavior>
                                             <a 
                                                 target='_blank'
                                                 className='font-inter rounded-[4px] bg-primary px-[22px] py-[13px] font-medium text-[14px] text-white'

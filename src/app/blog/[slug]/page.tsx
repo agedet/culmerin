@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -8,13 +6,14 @@ import { LuCalendar, LuUser, LuArrowLeft, LuArrowRight, LuClock, LuShare2 } from
 import { getArticleBySlug, blogArticles } from '@/lib/blog-data'
 
 interface BlogArticlePageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
-export default function BlogArticlePage({ params }: BlogArticlePageProps) {
-  const article = getArticleBySlug(params.slug)
+export default async function BlogArticlePage({ params }: BlogArticlePageProps) {
+  const { slug } = await params
+  const article = getArticleBySlug(slug)
 
   if (!article) {
     notFound()
