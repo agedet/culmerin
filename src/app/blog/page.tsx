@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { LuCalendar, LuUser, LuArrowRight, LuSearch, LuFilter } from 'react-icons/lu'
-import { blogArticles, getAllCategories, type BlogArticle } from '@/lib/blog-data'
+import { blogArticles, getAllCategories } from '@/lib/blog-data'
 
 export default function BlogPage() {
   const [searchTerm, setSearchTerm] = useState('')

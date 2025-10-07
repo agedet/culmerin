@@ -359,7 +359,7 @@ export default function ServicesPage() {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
                       <LuCircleCheck className="w-5 h-5 text-primary" />
-                      What's Included
+                      What&apos;s Included
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                       {service.features.map((feature, index) => (
@@ -493,7 +493,7 @@ export default function ServicesPage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our services can help you achieve your business objectives and drive growth.
+            Let&apos;s discuss how our services can help you achieve your business objectives and drive growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 

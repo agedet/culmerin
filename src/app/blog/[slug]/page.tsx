@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { LuCalendar, LuUser, LuArrowLeft, LuArrowRight, LuClock, LuShare2 } from 'react-icons/lu'
-import { getArticleBySlug, blogArticles, type BlogArticle } from '@/lib/blog-data'
+import { getArticleBySlug, blogArticles } from '@/lib/blog-data'
 
 interface BlogArticlePageProps {
   params: {
