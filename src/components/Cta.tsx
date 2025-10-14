@@ -17,11 +17,11 @@ export default function Cta() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-white text-dark hover:bg-secondary"
+              className="rounded-[50px] bg-white text-[17px] text-dark hover:bg-secondary"
               asChild
             >
               <Link href="/#contact">
-                Get Free Consultation
+                Get a Free Consultation
               </Link>
             </Button>
           </div>

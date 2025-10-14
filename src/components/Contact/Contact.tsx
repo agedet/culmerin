@@ -218,7 +218,7 @@ function Contact() {
                             <div className='mt-4'>
                                 <Button
                                     type='submit' 
-                                    className='rounded-[4px] bg-primary px-[22px] py-[13px] font-medium text-[14px] text-white disabled:bg-primary/50'
+                                    className='rounded-[50px] bg-primary px-[22px] py-[13px] font-medium text-[17px] text-white disabled:bg-primary/50'
                                     disabled={loading}
                                 >
                                     Send a message

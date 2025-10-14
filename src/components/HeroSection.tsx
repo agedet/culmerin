@@ -12,17 +12,17 @@ function HeroSection() {
               Stronger presence for a better future
             </h2>
 
-            <p className='text-[#872608]/80 mt-[20px] font-normal text-[12px] leading-[21px] md:text-[17px] md:leading-[29px] lg:text-[18px] lg:leading-[31px] w-full'>
+            <p className='text-[#872608]/80 mt-[20px] font-normal text-[14px] leading-[21px] md:text-[17px] md:leading-[29px] lg:text-[18px] lg:leading-[31px] w-full'>
               We manage your digital presence, so you can manage your buisness.
             </p>
 
-            <div className='flex gap-4 mt-[40px] mb-[40px]'>
-              <Link href='#contact' className='rounded-[50px] bg-primary px-[22px] py-[13px] font-medium text-[17px] leading-[29px] text-white'>
+            <div className='flex gap-2 mt-[40px] mb-[40px]'>
+              <Link href='#contact' className='rounded-[50px] bg-primary px-[22px] py-[13px] font-medium text-[14px] leading-[21px] sm:text-[17px] sm:leading-[29px] text-white '>
                 Start Today
               </Link>
 
-              <Link href='#contact' className='rounded-[50px] border border-primary px-[22px] py-[13px] font-medium text-[17px] leading-[29px] text-primary'>
-                Get a Free Consultation
+              <Link href='#contact' className='rounded-[50px] border border-primary px-[22px] py-[13px] font-medium text-[14px] leading-[21px] sm:text-[17px] sm:leading-[29px] text-primary'>
+                Get a Consultation
               </Link>
             </div>
           </div>
@@ -33,7 +33,7 @@ function HeroSection() {
               alt='Hero Image'
               width={500}
               height={100}
-              className='w-3/4 lg:w-[100%]'
+              className='w-5/6 lg:w-[100%]'
             />
           </div>
         </div>
