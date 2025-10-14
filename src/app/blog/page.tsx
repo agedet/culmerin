@@ -23,7 +23,7 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-primary/80 text-white py-20">
+      <section className="bg-gradient-to-r from-primary to-primary text-white py-20">
         <div className="container mx-auto max-w-[95%] lg:max-w-[90%]">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -117,7 +117,9 @@ export default function BlogPage() {
                     
                     <CardHeader className="pb-3">
                       <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors duration-200 line-clamp-2">
-                        {article.title}
+                        <Link href={`/blog/${article.slug}`} className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors duration-200 line-clamp-2">
+                          {article.title}
+                        </Link>
                       </CardTitle>
                     </CardHeader>
                     

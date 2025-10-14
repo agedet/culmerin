@@ -2,8 +2,9 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import { LuCalendar, LuUser, LuArrowLeft, LuArrowRight, LuClock, LuShare2 } from 'react-icons/lu'
+import { LuCalendar, LuUser, LuArrowLeft, LuArrowRight, LuClock } from 'react-icons/lu'
 import { getArticleBySlug, blogArticles } from '@/lib/blog-data'
+import ShareButton from '@/components/ShareButton'
 
 interface BlogArticlePageProps {
   params: Promise<{
@@ -32,7 +33,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
   return (
     <div className="min-h-screen bg-white">
       {/* Article Header */}
-      <section className="bg-gradient-to-r from-primary to-primary/80 text-white py-20">
+      <section className="bg-gradient-to-r from-primary to-primary text-white py-20">
         <div className="container mx-auto max-w-[95%] lg:max-w-[90%]">
           <div className="max-w-4xl mx-auto">
             {/* Breadcrumb */}
@@ -45,26 +46,6 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                 Back to Blog
               </Link>
             </nav>
-
-            {/* Article Meta */}
-            <div className="flex flex-wrap items-center gap-6 mb-6 text-sm">
-              <div className="flex items-center gap-2">
-                <LuUser className="w-4 h-4" />
-                <span>{article.author}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <LuCalendar className="w-4 h-4" />
-                <span>{article.date}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <LuClock className="w-4 h-4" />
-                <span>{article.readTime}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <LuShare2 className="w-4 h-4" />
-                <span>Share</span>
-              </div>
-            </div>
 
             {/* Category Badge */}
             <div className="mb-6">
@@ -82,6 +63,27 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
               {article.excerpt}
             </p>
+
+            {/* Article Meta */}
+            <div className="flex flex-wrap items-center gap-6 mt-6 text-sm">
+              <div className="flex items-center gap-2">
+                <LuUser className="w-4 h-4" />
+                <span>{article.author}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <LuCalendar className="w-4 h-4" />
+                <span>{article.date}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <LuClock className="w-4 h-4" />
+                <span>{article.readTime}</span>
+              </div>
+              <ShareButton 
+                title={article.title}
+                url={`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/blog/${article.slug}`}
+                description={article.excerpt}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -106,7 +108,14 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
               <div 
                 className="text-gray-700 leading-relaxed"
                 dangerouslySetInnerHTML={{ 
-                  __html: article.content.replace(/\n/g, '<br />').replace(/###/g, '<h3>').replace(/##/g, '<h2>').replace(/#/g, '<h1>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*(.*?)\*/g, '<em>$1</em>').replace(/`(.*?)`/g, '<code class="bg-gray-100 px-2 py-1 rounded">$1</code>')
+                  __html: article.content
+                  .replace(/\n/g, '<br />')
+                  .replace(/###/g, '<h5>')
+                  .replace(/##/g, '<h2>')
+                  .replace(/#/g, '<h2>')
+                  .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                  .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                  .replace(/`(.*?)`/g, '<code class="bg-gray-100 px-2 py-1 rounded">$1</code>')
                 }}
               />
             </div>

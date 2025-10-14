@@ -20,9 +20,7 @@ export const blogArticles: BlogArticle[] = [
     slug: 'future-web-development-2024',
     excerpt: 'Explore the latest web development trends including AI integration, WebAssembly, and modern frameworks that are shaping the future of the web.',
     content: `
-# The Future of Web Development: Trends to Watch in 2024
-
-The web development landscape is constantly evolving, and 2024 promises to bring exciting new technologies and methodologies that will reshape how we build and interact with web applications.
+      The web development landscape is constantly evolving, and 2024 promises to bring exciting new technologies and methodologies that will reshape how we build and interact with web applications.
 
 ## AI Integration in Web Development
 
@@ -60,7 +58,7 @@ The future of web development is bright, with AI integration, WebAssembly, and e
     author: 'Culmerin Team',
     date: 'December 15, 2024',
     readTime: '5 min read',
-    image: '/371shots_so.png',
+    image: '/jobshots_so.png',
     category: 'Web Development',
     tags: ['Web Development', 'AI', 'WebAssembly', 'React', 'Trends'],
     featured: true
@@ -71,9 +69,7 @@ The future of web development is bright, with AI integration, WebAssembly, and e
     slug: 'mobile-first-design-business',
     excerpt: 'Learn why mobile-first design is crucial for business success and how to implement it effectively in your digital strategy.',
     content: `
-# Mobile-First Design: Why It Matters for Your Business
-
-In today's digital landscape, mobile devices account for over 60% of web traffic. This shift has made mobile-first design not just a best practice, but a business necessity.
+    In today's digital landscape, mobile devices account for over 60% of web traffic. This shift has made mobile-first design not just a best practice, but a business necessity.
 
 ## What is Mobile-First Design?
 
@@ -135,9 +131,7 @@ Mobile-first design is essential for business success in today's mobile-dominate
     slug: 'seo-best-practices-2024',
     excerpt: 'Discover essential SEO strategies and techniques that will help boost your website\'s visibility and ranking in search engines.',
     content: `
-# SEO Best Practices for 2024: A Complete Guide
-
-Search Engine Optimization (SEO) continues to evolve, and staying updated with the latest best practices is crucial for online success.
+      Search Engine Optimization (SEO) continues to evolve, and staying updated with the latest best practices is crucial for online success.
 
 ## Core SEO Fundamentals
 
@@ -190,7 +184,7 @@ SEO in 2024 requires a holistic approach focusing on technical excellence, quali
     author: 'Culmerin Team',
     date: 'December 5, 2024',
     readTime: '6 min read',
-    image: '/371shots_so.png',
+    image: '/jobshots_so.png',
     category: 'SEO',
     tags: ['SEO', 'Search Engine Optimization', 'Digital Marketing', 'Content', 'Technical SEO'],
     featured: false
@@ -201,9 +195,7 @@ SEO in 2024 requires a holistic approach focusing on technical excellence, quali
     slug: 'scalable-web-apps-nextjs',
     excerpt: 'A comprehensive guide to building modern, scalable web applications using Next.js and best practices for performance optimization.',
     content: `
-# Building Scalable Web Applications with Next.js
-
-Next.js has become the go-to framework for building scalable, production-ready web applications. Here's how to leverage its power effectively.
+      Next.js has become the go-to framework for building scalable, production-ready web applications. Here's how to leverage its power effectively.
 
 ## Why Next.js?
 
@@ -287,9 +279,7 @@ Next.js provides the tools and features needed to build scalable, performant web
     slug: 'ux-importance-ecommerce',
     excerpt: 'Learn how exceptional UX design can significantly impact your e-commerce conversion rates and customer satisfaction.',
     content: `
-# The Importance of User Experience in E-commerce
-
-In the competitive world of e-commerce, user experience (UX) can make or break your business. Here's why UX matters and how to improve it.
+      In the competitive world of e-commerce, user experience (UX) can make or break your business. Here's why UX matters and how to improve it.
 
 ## Why UX Matters in E-commerce
 
@@ -359,7 +349,7 @@ Exceptional UX in e-commerce directly impacts your bottom line. By focusing on u
     author: 'Culmerin Team',
     date: 'November 20, 2024',
     readTime: '5 min read',
-    image: '/371shots_so.png',
+    image: '/jobshots_so.png',
     category: 'E-commerce',
     tags: ['UX Design', 'E-commerce', 'Conversion', 'Mobile', 'User Experience'],
     featured: false
@@ -370,9 +360,7 @@ Exceptional UX in e-commerce directly impacts your bottom line. By focusing on u
     slug: 'digital-transformation-small-business',
     excerpt: 'Discover how small businesses can leverage digital transformation to compete effectively in today\'s digital marketplace.',
     content: `
-# Digital Transformation: A Guide for Small Businesses
-
-Digital transformation isn't just for large corporations. Small businesses can leverage digital tools and strategies to compete effectively in today's marketplace.
+      Digital transformation isn't just for large corporations. Small businesses can leverage digital tools and strategies to compete effectively in today's marketplace.
 
 ## What is Digital Transformation?
 
@@ -475,7 +463,7 @@ Digital transformation is essential for small business survival and growth. By s
     image: '/jobshots_so.png',
     category: 'Business',
     tags: ['Digital Transformation', 'Small Business', 'Technology', 'Growth', 'Strategy'],
-    featured: false
+    featured: true
   }
 ];
 

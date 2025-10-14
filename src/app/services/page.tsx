@@ -259,7 +259,7 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-primary/80 text-white py-20">
+      <section className="bg-gradient-to-r from-primary to-primary text-white py-20">
         <div className="container mx-auto max-w-[95%] lg:max-w-[90%]">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -282,7 +282,7 @@ export default function ServicesPage() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-primary"
+                className="border-white text-primary hover:bg-white hover:bg-gray-100"
                 asChild
               >
                 <Link href="#contact">
@@ -427,7 +427,7 @@ export default function ServicesPage() {
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <h4 className="font-semibold text-gray-900 mb-1">Investment</h4>
+                        <h4 className="font-semibold text-gray-900 mb-1">Pricing</h4>
                         <p className="text-2xl font-bold text-primary">{service.price}</p>
                       </div>
                       <div>
@@ -444,7 +444,7 @@ export default function ServicesPage() {
                       asChild
                     >
                       <Link href="#contact">
-                        Get Started with {service.title}
+                        Get Started
                         <LuArrowRight className="w-4 h-4 ml-2" />
                       </Link>
                     </Button>
@@ -498,7 +498,7 @@ export default function ServicesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-white text-primary hover:bg-gray-100"
+              className="bg-white text-dark hover:bg-secondary"
               asChild
             >
               <Link href="/#contact">
@@ -508,7 +508,7 @@ export default function ServicesPage() {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-primary"
+              className="bg-white text-dark hover:bg-secondary"
               asChild
             >
               <Link href="/#contact">

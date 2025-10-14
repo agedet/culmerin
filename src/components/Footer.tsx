@@ -56,7 +56,7 @@ function Footer() {
             <div className="mb-6">
               <Link href="/">
                 <Image 
-                  src='/culmerinlogoc.png'
+                  src='/culmerinlogowhite.png'
                   alt='Culmerin Technologies Logo'
                   width={200}
                   height={60}
