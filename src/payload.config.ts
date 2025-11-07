@@ -1,27 +1,36 @@
 import sharp from 'sharp'
-import { lexicalEditor } from '@payloadcms/richtext-lexical'
+// import { lexicalEditor } from '@payloadcms/richtext-lexical';
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import path from 'path';
-// import { Users } from './collections/media',
+import { Users } from './collections/Users'
+import { Media } from './collections/Media'
+import { Pages } from './collections/Pages'
+import { Posts } from './collections/Posts'
+import { getServerSideURL } from './utilities/getURL'
+import { Categories } from './collections/Categories';
+import { defaultLexical } from './fields/defaultLexical';
+import { plugins } from './plugins';
+
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
 export default buildConfig({
-    admin: {
-        // user: Users.slug,
-        importMap: {
-            baseDir: path.resolve(dirname),
-        },
+  admin: {
+    user: Users.slug,
+    importMap: {
+      baseDir: path.resolve(dirname),
     },
+  },
   // If you'd like to use Rich Text, pass your editor here
-  editor: lexicalEditor(),
+  // editor: lexicalEditor(),
+  editor: defaultLexical,
 
   // Define and configure your collections in this array
-  collections: [],
-
+  collections: [Pages, Posts, Users, Media, Categories],
+  cors: [getServerSideURL()].filter(Boolean),
   // Your Payload secret - should be a complex and secure string, unguessable
   secret: process.env.PAYLOAD_SECRET || '',
   // Whichever Database Adapter you're using should go here
@@ -37,7 +46,8 @@ export default buildConfig({
   // This is optional - if you don't need to do these things,
   // you don't need it!
   sharp,
-//   plugins: [
-//     payloadCloudPlugin(),
-//   ],
+  plugins: [
+    ...plugins,
+    // storage-adapter-placeholder
+  ],
 })
