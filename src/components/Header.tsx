@@ -40,38 +40,35 @@ const Header = () => {
                     <div className='DESKTOP-MENU hidden lg:flex lg:justify-between lg:items-center'>
                         <ul className='flex justify-start items-center tracking-[0.75px] font-medium gap-[40px]'>
                             <li>
-                                <Link href='/' legacyBehavior>
-                                    <a>
-                                        Home
-                                    </a>
+                                <Link href='/'>
+                                    Home
                                 </Link>
                             </li>
                             <li  className='sm:mx-3'>
-                                <Link href='/#about' legacyBehavior>
-                                    <a>
-                                        About
-                                    </a>
+                                <Link href='/#about'>
+                                    About
                                 </Link>
                             </li>
                             <li>
-                                <Link href='/services' legacyBehavior>
-                                    <a>
-                                        Services
-                                    </a>
+                                <Link href='/services'>
+                                    Services
                                 </Link>
                             </li>
                             <li >
-                                <Link href='/blog' legacyBehavior>
-                                    <a>
-                                        Blog
-                                    </a>
+                                <Link href='/blog'>
+                                    Blog
+                                </Link>
+                            </li>
+                            <li >
+                                <Link href='/posts'>
+                                    Blog
                                 </Link>
                             </li>
                         </ul>
                        
                         <ul className='flex justify-center items-center tracking-[0.75px] font-medium gap-4'>
                             <li className='capitalize'>
-                                <Link href='https://wa.me/message/CMEEDQ4PSHVTG1' target='_blank' legacyBehavior>
+                                <Link href='https://wa.me/message/CMEEDQ4PSHVTG1' target='_blank'>
                                     <Image 
                                         src='/icons8-whatsapp-48.png'
                                         alt='whatsapp_icon'
@@ -82,12 +79,8 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href='/#contact' legacyBehavior>
-                                    <a         
-                                        className='nav-cta font-inter rounded-full border-[1px] border-primary px-[22px] py-[13px] text-[12px] text-primary'
-                                    >
-                                        Get a Free Consultation
-                                    </a>
+                                <Link href='/#contact' className='nav-cta font-inter rounded-full border-[1px] border-primary px-[22px] py-[13px] text-[12px] text-primary'>
+                                    Get a Free Consultation
                                 </Link>
                             </li>
                         </ul>
@@ -130,38 +123,37 @@ const Header = () => {
                                     <li  
                                         onClick={() => setIsNavOpen(false)}
                                     >
-                                        <Link href='/' legacyBehavior>
-                                            <a>
-                                                Home
-                                            </a>
+                                        <Link href='/' >
+                                            Home
                                         </Link>
                                     </li>
                                     <li 
                                         onClick={() => setIsNavOpen(false)}
                                     >
-                                        <Link href='/#about' legacyBehavior>
-                                            <a>
-                                                About
-                                            </a>
+                                        <Link href='/#about' >
+                                            About
                                         </Link>
                                     </li>
                                     <li 
                                         onClick={() => setIsNavOpen(false)}
                                     >
-                                        <Link href='/services' legacyBehavior>
-                                            <a>
-                                                Services
-                                            </a>
+                                        <Link href='/services' >
+                                            Services
                                         </Link>
                                     </li>
                                     
                                     <li 
                                         onClick={() => setIsNavOpen(false)}
                                     >
-                                        <Link href='/blog' legacyBehavior>
-                                            <a>
-                                                Blog
-                                            </a>
+                                        <Link href='/blog'>
+                                            Blog
+                                        </Link>
+                                    </li>
+                                    <li 
+                                        onClick={() => setIsNavOpen(false)}
+                                    >
+                                        <Link href='/posts'>
+                                            Blog
                                         </Link>
                                     </li>
                                 </ul>
@@ -170,7 +162,7 @@ const Header = () => {
                                     <li 
                                         onClick={() => setIsNavOpen(false)}
                                     >
-                                        <Link href='https://wa.me/message/CMEEDQ4PSHVTG1' target='_blank' legacyBehavior>
+                                        <Link href='https://wa.me/message/CMEEDQ4PSHVTG1' target='_blank'>
                                             <Image 
                                                 src='/icons8-whatsapp-48.png'
                                                 alt='whatsapp_icon'
@@ -184,13 +176,8 @@ const Header = () => {
                                     <li
                                         onClick={() => setIsNavOpen(false)}
                                     >
-                                        <Link href='/#contact' legacyBehavior>
-                                            <a 
-                                                target='_blank'
-                                                className='font-inter rounded-[4px] bg-primary px-[22px] py-[13px] font-medium text-[14px] text-white'
-                                            >
-                                                Contact Us
-                                            </a>
+                                        <Link href='/#contact' target='_blank' className='font-inter rounded-[4px] bg-primary px-[22px] py-[13px] font-medium text-[14px] text-white'>
+                                            Contact Us
                                         </Link>
                                     </li>
                                 </ul>

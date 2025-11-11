@@ -10,5 +10,10 @@ export const MediaBlock: Block = {
       relationTo: 'media',
       required: true,
     },
+    {
+      name: 'caption',
+      type: 'richText',
+      required: false,
+    },
   ],
 }
