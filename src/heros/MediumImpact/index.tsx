@@ -33,11 +33,11 @@ export const MediumImpactHero: React.FC<Page['hero']> = ({ links, media, richTex
               priority
               resource={media}
             />
-            {media?.caption && (
+            {/* {media?.caption && (
               <div className="mt-3">
                 <RichText data={media.caption} enableGutter={false} />
               </div>
-            )}
+            )} */}
           </div>
         )}
       </div>
