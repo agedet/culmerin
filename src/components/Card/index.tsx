@@ -37,47 +37,51 @@ export const Card: React.FC<{
       )}
       ref={card.ref}
     >
-      <div className="relative w-full ">
-        {!metaImage && <div className="">No image</div>}
-        {metaImage && typeof metaImage !== 'string' && <Media resource={metaImage} size="33vw" />}
+      <div className='relative'>
+        <div className="w-full">
+          {!metaImage && <div className="">No image</div>}
+          {metaImage && typeof metaImage !== 'string' && <Media resource={metaImage} size="33vw" />}
+        </div>
+        <div className='absolute top-4 left-4'>
+          {showCategories && hasCategories && (
+            <div className="bg-primary text-white px-3 py-1 rounded-full text-xs font-medium uppercase">
+              {showCategories && hasCategories && (
+                <div>
+                  {categories?.map((category, index) => {
+                    if (typeof category === 'object') {
+                      const { title: titleFromCategory } = category
+
+                      const categoryTitle = titleFromCategory || 'Untitled category'
+
+                      const isLast = index === categories.length - 1
+
+                      return (
+                        <Fragment key={index}>
+                          {categoryTitle}
+                          {!isLast && <Fragment>, &nbsp;</Fragment>}
+                        </Fragment>
+                      )
+                    }
+
+                    return null
+                  })}
+                </div>
+              )}
+            </div>
+          )}
+        </div>
       </div>
       <div className="p-4">
-        {showCategories && hasCategories && (
-          <div className="uppercase text-sm mb-4">
-            {showCategories && hasCategories && (
-              <div>
-                {categories?.map((category, index) => {
-                  if (typeof category === 'object') {
-                    const { title: titleFromCategory } = category
-
-                    const categoryTitle = titleFromCategory || 'Untitled category'
-
-                    const isLast = index === categories.length - 1
-
-                    return (
-                      <Fragment key={index}>
-                        {categoryTitle}
-                        {!isLast && <Fragment>, &nbsp;</Fragment>}
-                      </Fragment>
-                    )
-                  }
-
-                  return null
-                })}
-              </div>
-            )}
-          </div>
-        )}
         {titleToUse && (
           <div className="prose">
-            <h3>
-              <Link className="not-prose" href={href} ref={link.ref}>
+            <h3 className='text-xl font-bold text-gray-900 group-hover:text-primary transition-colors duration-200 line-clamp-2'>
+              <Link className="not-prose text-xl font-bold text-gray-900 group-hover:text-primary transition-colors duration-200 line-clamp-2" href={href} ref={link.ref}>
                 {titleToUse}
               </Link>
             </h3>
           </div>
         )}
-        {description && <div className="mt-2">{description && <p>{sanitizedDescription}</p>}</div>}
+        {description && <div className="mt-2 text-gray-600 text-sm leading-relaxed line-clamp-3">{description && <p>{sanitizedDescription}</p>}</div>}
       </div>
     </article>
   )

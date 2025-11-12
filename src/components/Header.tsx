@@ -61,7 +61,7 @@ const Header = () => {
                             </li>
                             <li >
                                 <Link href='/posts'>
-                                    Blog
+                                    Articles
                                 </Link>
                             </li>
                         </ul>
@@ -153,7 +153,7 @@ const Header = () => {
                                         onClick={() => setIsNavOpen(false)}
                                     >
                                         <Link href='/posts'>
-                                            Blog
+                                            Articles
                                         </Link>
                                     </li>
                                 </ul>

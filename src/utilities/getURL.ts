@@ -11,9 +11,11 @@ export const getServerSideURL = () => {
 
 export const getClientSideURL = () => {
   if (canUseDOM) {
-    const protocol = window.location.protocol
     const domain = window.location.hostname
     const port = window.location.port
+    
+    // Force http:// for localhost to avoid SSL issues
+    const protocol = domain === 'localhost' || domain === '127.0.0.1' ? 'http:' : window.location.protocol
 
     return `${protocol}//${domain}${port ? `:${port}` : ''}`
   }
