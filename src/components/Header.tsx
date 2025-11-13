@@ -55,13 +55,8 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li >
-                                <Link href='/blog'>
-                                    Blog
-                                </Link>
-                            </li>
-                            <li >
                                 <Link href='/posts'>
-                                    Articles
+                                    Blog
                                 </Link>
                             </li>
                         </ul>
@@ -141,19 +136,11 @@ const Header = () => {
                                             Services
                                         </Link>
                                     </li>
-                                    
-                                    <li 
-                                        onClick={() => setIsNavOpen(false)}
-                                    >
-                                        <Link href='/blog'>
-                                            Blog
-                                        </Link>
-                                    </li>
                                     <li 
                                         onClick={() => setIsNavOpen(false)}
                                     >
                                         <Link href='/posts'>
-                                            Articles
+                                            Blog
                                         </Link>
                                     </li>
                                 </ul>

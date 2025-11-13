@@ -1,15 +1,12 @@
 import type { Metadata } from 'next/types'
-
-import { CollectionArchive } from '@/components/CollectionArchive'
-// import { PageRange } from '@/components/PageRange'
-import { Pagination } from '@/components/Pagination'
 import configPromise from '@payload-config'
 import { getPayload } from 'payload'
 import React from 'react'
 import PageClient from './page.client'
+import { PostsClient } from './posts-client'
 
-// export const dynamic = 'force-static'
-// export const revalidate = 600
+export const dynamic = 'force-static'
+export const revalidate = 600
 
 export default async function Page() {
   const payload = await getPayload({ config: configPromise })
@@ -17,7 +14,7 @@ export default async function Page() {
   const posts = await payload.find({
     collection: 'posts',
     depth: 1,
-    limit: 12,
+    limit: 1000, // Fetch more posts for client-side filtering
     // overrideAccess: false,
     select: {
       title: true,
@@ -30,7 +27,7 @@ export default async function Page() {
   return (
     <div>
       <PageClient />
-      <section className="bg-gradient-to-r from-primary to-primary text-white py-14">
+      {/* <section className="bg-gradient-to-r from-primary to-primary text-white py-14">
         <div className='container mb-16'>
           <div className="prose dark:prose-invert max-w-none text-center">
             <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold mb-6'>Latest Articles</h1>
@@ -39,28 +36,9 @@ export default async function Page() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* <div className="container mb-8">
-        <PageRange
-          collection="posts"
-          currentPage={posts.page}
-          limit={12}
-          totalDocs={posts.totalDocs}
-        />
-      </div> */}
-
-      <section className='py-16'>
-        <CollectionArchive posts={posts.docs} />
-      </section>
-
-      <section className='py-12 bg-gray-50'>
-        <div className="container mx-auto max-w-[95%] lg:max-w-[90%]">
-          {posts.totalPages > 1 && posts.page && (
-            <Pagination page={posts.page} totalPages={posts.totalPages} />
-          )}
-        </div>
-      </section>
+      <PostsClient posts={posts.docs} />
 
       {/* Newsletter Signup */}
       <section className="bg-primary text-white py-16">
@@ -89,6 +67,13 @@ export default async function Page() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: `Payload Website Template Posts`,
+    title: `Culmerin Technologies blog`,
+    description: `Culmerin Technologies blog is a blog about web development, design, and digital marketing`,
+    openGraph: {
+      title: `Culmerin Technologies blog`,
+      description: `Culmerin Technologies blog is a blog about web development, design, and digital marketing`,
+      url: `https://culmerin.com`,
+      siteName: `Culmerin Technologies blog`,
+    },
   }
 }
