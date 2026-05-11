@@ -1,5 +1,6 @@
 "use client";
 
+import { use } from "react";
 import { notFound } from "next/navigation";
 import { motion, Variants } from "framer-motion";
 import { ArrowRight, CheckCircle2, Code2, Database, Layers } from "lucide-react";
@@ -55,9 +56,10 @@ const servicesData = {
 // Define valid slugs for TypeScript
 type ServiceSlug = keyof typeof servicesData;
 
-export default function ServiceDetailedPage({ params }: { params: { slug: string } }) {
+export default function ServiceDetailedPage({ params }: { params: Promise<{ slug: string }> }) {
+    const resolvedParams = use(params);
   // Check if the route exists in our data
-  const slug = params.slug as ServiceSlug;
+  const slug = resolvedParams.slug as ServiceSlug;
   const service = servicesData[slug];
 
   if (!service) {
