@@ -1,20 +1,39 @@
-import Contact from "@/components/Contact/Contact";
-import HeroSection from "@/components/HeroSection";
-import HeroStats from "@/components/HeroStats";
-import ServiceSection from "@/components/ServiceSection";
-import BlogSection from "@/components/BlogSection";
-import Cta from "@/components/Cta";
+// import Contact from "@/components/Contact/Contact";
+// import HeroSection from "@/components/Homepage/HeroSection";
+import HeroStats from "@/components/Homepage/HeroStats";
+// import ServiceSection from "@/components/Homepage/ServiceSection";
+// import BlogSection from "@/components/Homepage/BlogSection";
+// import Cta from "@/components/Homepage/Cta";
+// import ProblemSection from "@/components/Homepage/ProblemSection";
+import Hero from "@/components/Homepage/Hero";
+import Problem from "@/components/Homepage/Problem";
+import Services from "@/components/Homepage/Services";
+import SolutionSection from "@/components/Homepage/Solutions";
+import WhoWeServe from "@/components/Homepage/WhoweServer";
+import ProcessSection from "@/components/Homepage/OurProcess";
+import ContactSection from "@/components/Homepage/Contact";
+import FinalCTA from "@/components/Homepage/FinalCta";
+// import Navbar from "@/components/Global/Navbar";
+// import FooterNew from "@/components/Global/FooterNew";
+import ProofSection from "@/components/Homepage/Proof";
+// import ServicesSection from "@/components/Homepage/Services";
 
 
 export default function Home() {
   return (
-    <div>
-      <HeroSection />
+    <main className="min-h-screen bg-background">
+      {/* <Navbar /> */}
+      <Hero />
+      <Problem />
+      <SolutionSection />
+      <Services />
+      <WhoWeServe />
+      <ProcessSection />
       <HeroStats />
-      <ServiceSection />
-      <Contact />
-      <BlogSection />
-      <Cta />
-    </div>
+      <ProofSection />
+      <ContactSection />
+      <FinalCTA />
+      {/* <FooterNew /> */}
+    </main>
   );
 }

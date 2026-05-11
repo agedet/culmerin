@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+/* Added Inter since your h1-h6 tags reference it */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --primary: #df3e0d;
-  --secondary: #eeeeee;
-  --dark: #000000;
-  --white: #ffffff;
-  --accent: #df3e0d;
+  --primary-hex: #df3e0d;
+  --secondary-hex: #111111;
+  --dark-hex: #000000;
+  --white-hex: #ffffff;
+  --accent-hex: #df3e0d;
 }
 
 *, html {
@@ -39,14 +39,14 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
-  font-family: var(--font-inter), sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
 }
 
 li, ul {
   text-decoration: none;
   list-style: none;
-  font-family: var(--font-outfit), sans-serif;
+  font-family: 'Outfit', sans-serif;
 }
 
 img {
@@ -57,24 +57,26 @@ img {
 a {
   text-decoration: none;
   color: inherit;
-  font-family: var(--font-outfit), sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 14px;
 }
 
 p {
-  font-family: var(--font-outfit), sans-serif;
+  font-family: 'Outfit', sans-serif;
 }
 
 button {
-  font-family: var(--font-outfit), sans-serif;
+  font-family: 'Outfit', sans-serif;
   cursor: pointer;
   border-radius: 4px;
 }
 
 ::placeholder {
-  color: var(--dark);
-  opacity: 0.5;
+  color: hsl(var(--muted-foreground));
+  opacity: 0.8;
 }
+
+/* --- NAVIGATION CLASSES (UPDATED FOR DARK THEME) --- */
 
 .notScrolled {
   position: -webkit-sticky;
@@ -85,7 +87,7 @@ button {
 }
 
 .notScrolled a {
-  color: var(--dark-color);
+  color: hsl(var(--foreground));
   font-size: 16px;
   line-height: 27px;
   font-weight: 500;
@@ -94,45 +96,29 @@ button {
 }
 
 .notScrolled a:hover {
-  color: var(--primary-color);
+  color: hsl(var(--primary));
   font-size: 16px;
   line-height: 27px;
   font-weight: 500;
-  /* text-transform: capitalize; */
 }
 
 .notScrolled .nav-cta {
-  color: var(--primary);
+  color: hsl(var(--foreground));
   font-size: 14px;
   line-height: 27px;
   font-weight: 500;
-  font-family: var(--font-inter), sans-serif !important;
+  font-family: 'Inter', sans-serif !important;
   letter-spacing: 0.85px;
   border-radius: 50px;
-  background-color: var(--white);
+  background-color: hsl(var(--primary));
   padding: 13px 22px;
   transition: all ease-in-out .3s;
 }
 
 .notScrolled .nav-cta:hover {
-  color: var(--primary);
-  border-color: var(--primary-color);
-  font-size: 14px;
-  line-height: 27px;
-  font-weight: 500;
-  /* text-transform: capitalize; */
-  letter-spacing: 0.85px;
-  padding: 13px 22px;
-}
-
-.notScrolled .nav-cta-nude {
-  font-size: 16px;
-  line-height: 27px;
-  font-weight: 500;
-  /* text-transform: capitalize; */
-  letter-spacing: 0.85px;
-  border-radius: 50px;
-  padding: 13px 22px;
+  background-color: transparent;
+  color: hsl(var(--primary));
+  border: 1px solid hsl(var(--primary));
 }
 
 .isScrolled {
@@ -141,11 +127,13 @@ button {
   display: flex;
   align-items: center;
   z-index: 20;
-  background: var(--white);
+  background: rgba(5, 5, 5, 0.9); /* Dark translucent background instead of white */
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid hsl(var(--border));
 }
 
 .isScrolled a {
-  color: var(--dark-color);
+  color: hsl(var(--foreground));
   font-size: 16px;
   line-height: 27px;
   font-weight: 500;
@@ -154,18 +142,14 @@ button {
 }
 
 .isScrolled a:hover {
-  color: var(--primary-color);
-  font-size: 16px;
-  line-height: 27px;
-  font-weight: 500;
-  text-transform: capitalize;
+  color: hsl(var(--primary));
 }
 
 .isScrolled .nav-cta {
-  color: var(--primary);
-  background-color: var(--white);
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--primary));
   font-size: 14px;
-  font-family: var(--font-inter), sans-serif !important;
+  font-family: 'Inter', sans-serif !important;
   line-height: 27px;
   font-weight: 500;
   border-radius: 50px;
@@ -175,24 +159,9 @@ button {
 }
 
 .isScrolled .nav-cta:hover {
-  color: var(--primary);
-  font-size: 14px;
-  line-height: 27px;
-  font-weight: 500;
-  letter-spacing: 0.85px;
-  border-radius: 50px;
-  background-color: var(--white) !important;
-  padding: 13px 22px;
-}
-
-.isScrolled .nav-cta-nude {
-  font-size: 16px;
-  line-height: 27px;
-  font-weight: 500;
-  /* text-transform: capitalize; */
-  letter-spacing: 0.85px;
-  border-radius: 5px;
-  padding: 15px 30px;
+  background-color: transparent !important;
+  color: hsl(var(--primary));
+  border: 1px solid hsl(var(--primary));
 }
 
 .hideMenuNav {
@@ -208,15 +177,17 @@ button {
   height: 100vh;
   top: 0;
   left: 0;
-  background: var(--secondary);
+  background: hsl(var(--background));
+  border-right: 1px solid hsl(var(--border));
   z-index: 40;
   font-weight: 600;
   padding: 20px;
 }
 
+/* --- TYPOGRAPHY SCALING --- */
 @layer base {
   body {
-    @apply text-[18px] 2xl:text-[18px] 3xl:text-[45px] 4xl:text-[48px] leading-[1.5] font-[1.5]  
+    @apply text-[18px] 2xl:text-[18px] 3xl:text-[45px] 4xl:text-[48px] leading-[1.5];
   }
   
   h1 {
@@ -228,65 +199,50 @@ button {
   }
 
   h6 {
-    @apply text-[12px] xl:text-[14px]
+    @apply text-[12px] xl:text-[14px];
   }
 }
 
+/* --- SHADCN DARK THEME ENFORCEMENT --- */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: var(--primary);
-    --primary-foreground: 0 0% 98%;
-    --secondary: var(--secondary);
-    --secondary-foreground: 240 5.9% 10%;
-    --dark: var(--dark);
-    --shade: var(--shade);
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
+    /* Deep cinematic black background */
+    --background: 0 0% 2%; 
+    --foreground: 0 0% 98%;
+    
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
+    
+    /* Culmerin Orange (#df3e0d) converted to HSL */
+    --primary: 14 90% 46%; 
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
+    
+    --accent: 14 90% 46%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
-    --chart-1: 12 76% 61%;
+    
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 14 90% 46%;
+    
+    --chart-1: 14 90% 46%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    
     --radius: 0.5rem;
-  }
-  .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
   }
 }
 
@@ -299,11 +255,9 @@ button {
   }
 }
 
-/* @layer base {
-  * {
-    @apply border-border outline-ring/50;
+/* Utility for cinematic glowing elements */
+@layer utilities {
+  .glow-orange {
+    box-shadow: 0 0 30px -5px rgba(223, 62, 13, 0.4);
   }
-  body {
-    @apply bg-background text-foreground;
-  }
-} */
+}
