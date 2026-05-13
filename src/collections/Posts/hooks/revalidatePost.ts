@@ -1,6 +1,8 @@
 import type { CollectionAfterChangeHook, CollectionAfterDeleteHook } from 'payload'
 
-import { revalidatePath, revalidateTag } from 'next/cache'
+import { revalidatePath,
+  //  revalidateTag 
+  } from 'next/cache'
 
 import type { Post } from '../../../payload-types'
 
