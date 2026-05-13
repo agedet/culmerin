@@ -3,6 +3,8 @@
 import { motion, Variants } from "framer-motion";
 import { Button } from "@/components/ui/button"; // shadcn ui button
 import { ArrowRight, ChevronDown } from "lucide-react";
+import Link from "next/link";
+
 
 export default function Hero() {
   // Animation variants for staggered cinematic reveal
@@ -22,7 +24,10 @@ export default function Hero() {
     visible: { 
       opacity: 1, 
       y: 0, 
-      transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } 
+      transition: { 
+        duration: 0.8, 
+        ease: [0.22, 1, 0.36, 1] 
+      } 
     },
   };
 
@@ -63,12 +68,13 @@ export default function Hero() {
         {/* "Build a stronger brand, smarter systems, and a better sales engine." */}
         <motion.h1 
           variants={itemVariants}
-          className="font-inter text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-6xl mb-8 leading-[1.05]"
+          className="font-inter text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl mb-8 leading-[1.05]"
         >
-          Build Stronger Presence,
+          Build Stronger Presence, {' '}
           <br className="hidden md:block" />
           <span className="text-primary relative whitespace-nowrap">
             Better Sales Engine.
+
             {/* Underline decorative accent */}
             <svg className="absolute w-full h-3 -bottom-1 left-0 text-primary opacity-60" viewBox="0 0 100 10" preserveAspectRatio="none">
               <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="2" fill="transparent" />
@@ -90,21 +96,27 @@ export default function Hero() {
           variants={itemVariants}
           className="flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto"
         >
-          <Button 
-            size="lg" 
-            className="w-full sm:w-auto h-14 px-8 font-inter text-base bg-primary hover:bg-primary/90 text-white rounded-full glow-orange transition-all duration-300 group"
-          >
-            Book a strategy call
-            <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Button>
+            <Button asChild size="lg" className="w-full sm:w-auto h-14 px-8 font-inter text-base bg-primary hover:bg-primary/90 text-white rounded-full glow-orange transition-all duration-300 group relative overflow-hidden">
+                <Link 
+                    href="/#contact"
+                >
+                    <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" />
+                    <span className="relative z-10 flex items-center">
+                        Book a Strategy Call
+                        <ArrowRight 
+                            className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" 
+                        />
+                    </span>
+                </Link>
+            </Button>
           
-          {/* <Button 
+          <Button 
             size="lg" 
             variant="outline" 
             className="w-full sm:w-auto h-14 px-8 font-inter text-base border-border hover:bg-secondary hover:text-foreground text-muted-foreground rounded-full transition-all duration-300"
           >
             Explore our growth systems
-          </Button> */}
+          </Button>
         </motion.div>
       </motion.div>
 

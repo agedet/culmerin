@@ -57,7 +57,7 @@ export default function ServicesVerticalTrack() {
   };
 
   return (
-    <section className="relative w-full bg-background py-32 px-6 overflow-hidden border-t border-border/50">
+    <section id="services" className="relative w-full bg-background py-32 px-6 overflow-hidden border-t border-border/50">
       {/* Background ambient light */}
       <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px] pointer-events-none" />
 
@@ -129,6 +129,8 @@ export default function ServicesVerticalTrack() {
                               } 
                                 alt={service.title} 
                                 fill 
+                                priority
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 className="object-cover opacity-80 mix-blend-lighten" 
                             /> 
                          

@@ -86,12 +86,10 @@ export default function ServiceDetailedPage({ params }: { params: Promise<{ slug
 
   return (
     <main className="min-h-screen bg-background pt-32 pb-24 overflow-hidden relative">
-      
       {/* --- CINEMATIC BACKGROUND GLOW --- */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/10 rounded-full blur-[200px] pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        
         {/* --- 1. HERO SECTION --- */}
         <motion.div 
           variants={containerVariants}
@@ -99,14 +97,14 @@ export default function ServiceDetailedPage({ params }: { params: Promise<{ slug
           animate="visible"
           className="max-w-4xl mb-32"
         >
-          <motion.div variants={itemVariants} className="mb-8">
+          {/* <motion.div variants={itemVariants} className="mb-8">
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-border bg-card/50 backdrop-blur-sm shadow-[0_0_15px_rgba(223,62,13,0.1)]">
               {service.icon}
               <span className="text-sm font-medium uppercase tracking-widest text-muted-foreground font-inter">
                 Culmerin Capability
               </span>
             </div>
-          </motion.div>
+          </motion.div> */}
           
           <motion.h1 
             variants={itemVariants}

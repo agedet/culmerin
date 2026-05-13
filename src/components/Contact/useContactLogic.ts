@@ -13,7 +13,6 @@ export function useContactLogic() {
     channel: "",
     project: "",
     projectDetails: "",
-    
   });
   const [error, setError] = useState("");
 

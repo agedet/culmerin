@@ -43,11 +43,10 @@ export default function AboutPage() {
 
   return (
     <main className="min-h-screen bg-background overflow-hidden relative">
-      
       {/* --- 1. CINEMATIC HERO SECTION --- */}
       <section className="relative pt-40 pb-32 px-6 flex flex-col items-center justify-center text-center">
         {/* Ambient background glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-primary/10 rounded-full blur-[200px] pointer-events-none z-0" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-primary/10 rounded-full blur-[200px] pointer-events-none z-10" />
         
         <motion.div 
           variants={containerVariants}

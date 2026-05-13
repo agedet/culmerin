@@ -24,9 +24,16 @@ export async function POST(req: Request) {
     // Send confirmation email
     await sendConfirmationEmail(formData.email, formData.firstName);
 
-    return NextResponse.json({ success: true, message: "Form submitted successfully!" });
+    return NextResponse.json({ 
+      success: true, 
+      message: "Form submitted successfully!" 
+    });
   } catch (error) {
-    return NextResponse.json({ success: false, error: `Submission failed: - error: ${error}` }, { status: 500 });
+    return NextResponse.json({ 
+      success: false, 
+      error: `Submission failed: - error: ${error}` 
+     }, { status: 500 }
+    );
   }
 }
 

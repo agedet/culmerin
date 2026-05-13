@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button"; // shadcn button
 import Image from "next/image";
 
@@ -59,6 +59,7 @@ export default function Navbar() {
                 <Image 
                     src="/culmerinlogowhite.png" 
                     alt="Culmerin Logo" 
+                    loading="eager"
                     width={100} 
                     height={100} 
                     className="w-full h-full" 
@@ -82,10 +83,18 @@ export default function Navbar() {
             </ul>
             
             {/* Desktop CTA */}
-            <Button 
-              className="font-inter bg-primary text-white hover:bg-transparent hover:text-primary hover:border hover:border-primary transition-all duration-300 rounded-full px-6 glow-orange"
-            >
-              Book a strategy call
+            <Button asChild size="lg" className="w-full sm:w-auto px-8 font-inter text-base bg-primary hover:bg-primary/90 text-white rounded-full glow-orange transition-all duration-300 group relative overflow-hidden">
+                <Link 
+                    href="/#contact"
+                >
+                    <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" />
+                    <span className="relative z-10 flex items-center">
+                        Book a Strategy Call
+                        {/* <ArrowRight 
+                            className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" 
+                        /> */}
+                    </span>
+                </Link>
             </Button>
           </nav>
 

@@ -38,9 +38,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="relative" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${outfit.variable} antialiased`}
+        className={`${inter.variable} ${outfit.variable} antialiased relative`}
+        suppressHydrationWarning 
       >
         <Providers>
           {/* <AdminBar 
@@ -50,7 +51,7 @@ export default function RootLayout({
           /> */}
           <Navbar />
           {children}
-          <Toaster richColors position="bottom-right" />
+          <Toaster richColors position="top-right" />
           <FooterNew />
         </Providers>
       </body>

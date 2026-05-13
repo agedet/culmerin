@@ -11,7 +11,7 @@ import Services from "@/components/Homepage/Services";
 import SolutionSection from "@/components/Homepage/Solutions";
 import WhoWeServe from "@/components/Homepage/WhoweServer";
 import ProcessSection from "@/components/Homepage/OurProcess";
-import ContactSection from "@/components/Homepage/Contact";
+import ContactSection from "@/components/Homepage/Contact-Landing";
 import FinalCTA from "@/components/Homepage/FinalCta";
 // import Navbar from "@/components/Global/Navbar";
 // import FooterNew from "@/components/Global/FooterNew";
