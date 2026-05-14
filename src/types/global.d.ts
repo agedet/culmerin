@@ -7,3 +7,5 @@ export interface ContactFormData {
     projectDetails: string;
     dateTime?: Date;
 }
+
+declare module '@payloadcms/next/css';

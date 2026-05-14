@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+// import Header from "@/components/Global/Header";
+// import Footer from "@/components/Global/Footer";
 import { Toaster } from "@/components/ui/sonner";
 import { Providers } from "@/providers";
 import { getServerSideURL } from "@/utilities/getURL";
 import { mergeOpenGraph } from "@/utilities/mergeOpenGraph";
+import Navbar from "@/components/Global/Navbar";
+import FooterNew from "@/components/Global/FooterNew";
 // import { AdminBar } from "@/components/AdminBar";
 
 const inter = Inter({
@@ -36,9 +38,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="relative" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${outfit.variable} antialiased`}
+        className={`${inter.variable} ${outfit.variable} antialiased relative`}
+        suppressHydrationWarning 
       >
         <Providers>
           {/* <AdminBar 
@@ -46,10 +49,10 @@ export default function RootLayout({
               preview: isEnabled
             }} 
           /> */}
-          <Header />
+          <Navbar />
           {children}
-          <Toaster richColors position="bottom-right" />
-          <Footer />
+          <Toaster richColors position="top-right" />
+          <FooterNew />
         </Providers>
       </body>
     </html>

@@ -3,7 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from './ui/card'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../ui/card'
 import { LuCalendar, LuUser, LuArrowRight } from 'react-icons/lu'
 import { getFeaturedArticles } from '@/lib/blog-data'
 
